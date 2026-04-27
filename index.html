@@ -3,24 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+    <main class="app" aria-labelledby="game-title">
+        <header class="app-header">
+            <div>
+                <p class="eyebrow">Focus challenge</p>
+                <h1 id="game-title">Memory Game</h1>
+            </div>
+            <button class="restart-button" id="restartButton" type="button">
+                <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+                <span>Restart</span>
+            </button>
+        </header>
 
-    <h1>Memory Game</h1>
-    <h3>Moves: <span id="moves">0</span></h3>
+        <section class="stats" aria-label="Game stats">
+            <div class="stat">
+                <span class="stat-label">Moves</span>
+                <strong id="moves">0</strong>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Time</span>
+                <strong><span id="timer">0</span>s</strong>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Best</span>
+                <strong id="bestScore">--</strong>
+            </div>
+        </section>
 
-    <div class="game-board" id="board">
+        <section class="game-panel" aria-label="Memory card board">
+            <div class="game-board" id="board"></div>
+        </section>
 
-    </div>
-    <h3>⏱ Time: <span id="timer">0</span> sec</h3>
-    <h2 id="winMessage" class="win-box"></h2>
+        <p id="gameStatus" class="game-status" aria-live="polite">Find all 8 matching pairs.</p>
+    </main>
 
-
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
