@@ -5,9 +5,11 @@
 body {
   min-height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: #172033;
-  background: #eef2f7;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #2f302a;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0.44)),
+    #e8dfcf;
 }
 
 button,
@@ -18,7 +20,7 @@ button,
 .app {
   width: min(94vw, 640px);
   margin: 0 auto;
-  padding: 32px 0;
+  padding: 36px 0;
 }
 
 .app-header {
@@ -31,17 +33,19 @@ button,
 
 .eyebrow {
   margin: 0 0 4px;
-  color: #5b6f8f;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  color: #7a6d5a;
+  font-family: Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(2rem, 8vw, 3rem);
-  line-height: 1;
+  font-size: clamp(2.1rem, 8vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.05;
 }
 
 .restart-button {
@@ -50,21 +54,21 @@ h1 {
   gap: 8px;
   min-height: 44px;
   padding: 0 16px;
-  border: 0;
+  border: 1px solid #7b7568;
   border-radius: 8px;
-  color: #ffffff;
-  background: #1f7a6d;
+  color: #2f302a;
+  background: #f6f0e3;
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(31, 122, 109, 0.22);
+  box-shadow: none;
 }
 
 .restart-button:hover {
-  background: #166256;
+  background: #eee4d2;
 }
 
 .restart-button:focus-visible,
 .card:focus-visible {
-  outline: 3px solid #f6c84c;
+  outline: 3px solid #ba7d3c;
   outline-offset: 3px;
 }
 
@@ -78,18 +82,19 @@ h1 {
 .stat {
   min-width: 0;
   padding: 14px;
-  border: 1px solid #d8e0eb;
+  border: 1px solid #cfc2ad;
   border-radius: 8px;
-  background: #ffffff;
-  box-shadow: 0 8px 22px rgba(23, 32, 51, 0.08);
+  background: #f8f1e4;
+  box-shadow: none;
 }
 
 .stat-label {
   display: block;
   margin-bottom: 4px;
-  color: #60708a;
+  color: #746750;
+  font-family: Arial, sans-serif;
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -99,10 +104,10 @@ h1 {
 
 .game-panel {
   padding: clamp(12px, 4vw, 22px);
-  border: 1px solid #d8e0eb;
+  border: 1px solid #c8b89d;
   border-radius: 8px;
-  background: #ffffff;
-  box-shadow: 0 18px 44px rgba(23, 32, 51, 0.12);
+  background: #f3eadb;
+  box-shadow: 0 2px 0 rgba(89, 72, 48, 0.12);
 }
 
 .game-board {
@@ -114,34 +119,37 @@ h1 {
 .card {
   aspect-ratio: 1;
   width: 100%;
-  border: 0;
+  border: 1px solid #6f6a5d;
   border-radius: 8px;
-  color: #ffffff;
-  background: #25314a;
+  color: #f8f1e4;
+  background: #5a6650;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: clamp(1.45rem, 8vw, 2.4rem);
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 3px 0 #3e4738;
+  transition: background 0.16s ease, color 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  background: #31405f;
+  transform: translateY(-1px);
+  background: #66745b;
+  box-shadow: 0 4px 0 #3e4738;
 }
 
 .card.flipped {
-  color: #172033;
-  background: #ffffff;
-  box-shadow: inset 0 0 0 2px #d8e0eb;
+  color: #4b3f32;
+  background: #f9f3e8;
+  box-shadow: inset 0 0 0 1px #d4c5ae;
 }
 
 .card.matched {
-  color: #ffffff;
-  background: #1f7a6d;
+  color: #f8f1e4;
+  background: #8a5a44;
   cursor: default;
   transform: none;
+  box-shadow: inset 0 0 0 1px #744a37;
 }
 
 .card i {
@@ -156,14 +164,15 @@ h1 {
 .game-status {
   min-height: 28px;
   margin: 18px 0 0;
-  color: #40506a;
+  color: #665d4d;
+  font-family: Arial, sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
 
 .game-status.win {
-  color: #1f7a6d;
+  color: #8a5a44;
 }
 
 @media (max-width: 520px) {
